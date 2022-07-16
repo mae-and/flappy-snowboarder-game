@@ -1,0 +1,112 @@
+body {
+  display: flex;
+}
+
+.game-container {
+  width: 500px;
+  height: 730px;
+  position: absolute;
+  left: 80px;
+}
+
+.border-left {
+  width: 80px;
+  height: 790px;
+  position: absolute;
+  background-color: white;
+  z-index: +2;
+}
+
+.border-right {
+  width: 200px;
+  height: 790px;
+  position: absolute;
+  background-color: white;
+  z-index: +2;
+  left: 580px;
+}
+
+.border-top {
+  width: 660px;
+  height: 50px;
+  position: absolute;
+  background-color: white;
+  z-index: +2;
+  top: -50px;
+}
+
+.sky {
+  background-image: url("background.jpeg");
+  width: 500px;
+  height: 630px;
+  position: absolute;
+}
+
+.ground {
+  background-image: url("verticallines.jpeg");
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  top: 630px;
+  z-index: +1;
+}
+
+.bird {
+  background-image: url("icons8-snowboarder-60.png");
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  left: 220px;
+  bottom: 100px;
+}
+
+.obstacle {
+  background-image: url("pngwing.com.png");
+  width: 150px;
+  height: 300px;
+  position: absolute;
+}
+
+.topObstacle {
+  background-image: url("clouds-10.png");
+  width: 200px;
+  height: 72px;
+  position: absolute;
+}
+
+@keyframes slideright {
+  from {
+    background-position: 10000%;
+  }
+  to {
+    background-position: 0%;
+  }
+}
+
+@-webkit-keyframes slideright {
+  from {
+    background-position: 10000%;
+  }
+
+  to {
+    background-position: 0%;
+  }
+}
+
+.ground-container {
+  height: 100px;
+  width: 630px;
+  left: 80px;
+}
+
+.ground-moving {
+  position: relative;
+  top: 630px;
+  height: 100px;
+  background-image: url("verticallines.jpeg");
+  background-repeat: repeat-x;
+  animation: slideright 100s infinite linear;
+  -webkit-animation: slideright 100s infinite linear;
+  width: 100%;
+  z-index: +1;
+}
